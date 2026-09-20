@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title id="title-el"
+data-en="ClinicNote · Your Family Medical Memory"
+data-zh="ClinicNote · 全家的医疗记忆">
+ClinicNote · Your Family Medical Memory
+</title>
+
+
+<meta name="description"
+id="meta-desc"
+data-en="ClinicNote is a private family medical memory app that connects visits, symptoms, medications, tests and follow-ups into one clear timeline."
+data-zh="ClinicNote 是一款家庭医疗记忆应用，将就诊、症状、用药、检查和复诊整理成清晰时间线。">
+
+
+<link rel="icon" href="clinicnote_128.png">
+
+
+<style>
+
+:root{
+--bg:#F7FAFC;
+--surface:#FFFFFF;
+--text:#0F172A;
+--text2:#64748B;
+--accent:#06B6C4;
+--accent2:#0891B2;
+}
+
+
+*{
+box-sizing:border-box
+}
+
+
+html,body{
+
+margin:0;
+
+background:var(--bg);
+
+color:var(--text);
+
+font-family:
+ui-sans-serif,
+system-ui,
+-apple-system,
+Segoe UI,
+Helvetica,
+Arial,
+"PingFang SC",
+"Microsoft Yahei",
+sans-serif;
+
+}
+
+
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:40px 24px;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.brand{
+
+font-weight:900;
+
+font-size:22px;
+
+color:#06B6C4;
+
+}
+
+
+
+.nav-links{
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+.nav-links a{
+
+color:var(--text2);
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+
+
+.hero{
+
+display:grid;
+
+grid-template-columns:
+1.1fr
+.9fr;
+
+gap:40px;
+
+margin-top:60px;
+
+align-items:center;
+
+}
+
+
+
+.hero h1{
+
+font-size:48px;
+
+line-height:1.1;
+
+margin:0 0 20px;
+
+}
+
+
+
+.hero p{
+
+font-size:19px;
+
+color:var(--text2);
+
+line-height:1.6;
+
+}
+
+
+
+.button{
+
+display:inline-block;
+
+padding:14px 22px;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+180deg,
+var(--accent),
+var(--accent2)
+);
+
+color:white;
+
+font-weight:800;
+
+text-decoration:none;
+
+}
+
+
+
+.button.ghost{
+
+background:white;
+
+border:1px solid #D5DEE8;
+
+color:var(--text);
+
+margin-left:12px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:26px;
+
+border-radius:20px;
+
+box-shadow:
+0 12px 35px rgba(0,0,0,.06);
+
+}
+
+
+
+.section{
+
+margin-top:90px;
+
+}
+
+
+
+.grid-3{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:22px;
+
+}
+
+
+
+.text2{
+
+color:var(--text2);
+
+line-height:1.7;
+
+}
+
+
+
+.tag{
+
+display:inline-block;
+
+padding:5px 10px;
+
+border-radius:8px;
+
+background:#DFF8FA;
+
+color:#0891B2;
+
+font-weight:700;
+
+font-size:12px;
+
+}
+
+
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+}
+
+
+.gallery img{
+
+width:100%;
+
+border-radius:18px;
+
+}
+
+
+
+.footer{
+
+margin-top:80px;
+
+padding:30px 0;
+
+border-top:1px solid #E5EAF2;
+
+color:var(--text2);
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<nav>
+
+<div class="brand">
+
+ClinicNote
+
+</div>
+
+
+<div class="nav-links">
+
+<a href="#features"
+data-en="Features"
+data-zh="功能">
+</a>
+
+
+<a href="#privacy"
+data-en="Privacy"
+data-zh="隐私">
+</a>
+
+
+<a href="#support"
+data-en="Support"
+data-zh="支持">
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1
+
+data-en="Your family's medical memory, organized around every visit."
+
+data-zh="围绕每一次就诊，记录全家的医疗记忆">
+
+</h1>
+
+
+
+<p
+
+data-en="ClinicNote connects visits, symptoms, medications, test reports and follow-ups into one private medical timeline. Everything stays under your control."
+
+data-zh="ClinicNote 将就诊、症状、用药、检查报告和复诊连接成一条私密医疗时间线。数据始终由你掌控。">
+
+</p>
+
+
+
+<div style="margin-top:24px">
+
+
+<a class="button"
+
+href="#features"
+
+data-en="Explore Features"
+
+data-zh="查看功能">
+
+</a>
+
+
+
+<a class="button ghost"
+
+href="#privacy"
+
+data-en="Privacy First"
+
+data-zh="隐私优先">
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3
+
+data-en="Visit-Centered Timeline"
+
+data-zh="以就诊为中心的时间线">
+
+</h3>
+
+
+
+<p class="text2"
+
+data-en="Symptoms → Doctor visits → Medication → Test results → Follow-ups"
+
+data-zh="症状 → 就诊 → 用药 → 检查 → 复诊">
+
+</p>
+
+
+
+<div style="
+height:240px;
+background:#E9FBFC;
+border-radius:16px;
+display:grid;
+place-items:center;
+font-size:40px;
+color:#06B6C4">
+
+♡
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="features" class="section">
+
+
+<h2
+
+data-en="Core Features"
+
+data-zh="核心功能">
+
+</h2>
+
+
+
+
+<div class="grid-3">
+
+
+<div class="card">
+
+<div class="tag">
+Family
+</div>
+
+
+<h3
+
+data-en="Family Medical Profiles"
+
+data-zh="家庭成员健康档案">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Create separate medical memories for children, parents and family members."
+
+data-zh="为孩子、父母和家人建立独立医疗档案。">
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="tag">
+Visit
+</div>
+
+
+<h3
+
+data-en="Complete Visit Records"
+
+data-zh="完整就诊记录">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Record diagnoses, doctor instructions, prescriptions and follow-up plans together."
+
+data-zh="将诊断、医嘱、处方和复诊计划关联保存。">
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="tag">
+Timeline
+</div>
+
+
+<h3
+
+data-en="Health Journey Timeline"
+
+data-zh="健康时间线">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Review how symptoms changed and how treatments progressed over time."
+
+data-zh="查看症状变化和治疗过程，而不是零散记录。">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<div class="tag">
+Medication
+</div>
+
+
+<h3
+
+data-en="Medication Tracking"
+
+data-zh="用药记录">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Keep dosage, schedule and medication history connected with visits."
+
+data-zh="记录剂量、频次，并关联对应就诊。">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<div class="tag">
+Reports
+</div>
+
+
+<h3
+
+data-en="Medical Documents"
+
+data-zh="医疗资料管理">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Store prescriptions, laboratory reports and medical documents with related visits."
+
+data-zh="病历、处方、化验单与对应就诊记录统一管理。">
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="tag">
+Follow-up
+</div>
+
+
+<h3
+
+data-en="Doctor-ready Summary"
+
+data-zh="复诊准备摘要">
+
+</h3>
+
+
+<p class="text2"
+
+data-en="Prepare previous symptoms, medications and tests before your next appointment."
+
+data-zh="复诊前快速整理过去症状、用药和检查结果。">
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="privacy" class="section">
+
+
+<div class="card">
+
+
+<h2
+
+data-en="Privacy by Design"
+
+data-zh="隐私优先设计">
+
+</h2>
+
+
+<p class="text2"
+
+data-en="ClinicNote does not require an account and does not operate a medical data server. Records stay locally on your device by default. Optional iCloud sync uses your own private iCloud database."
+
+data-zh="ClinicNote 不需要账号，也没有医疗数据服务器。记录默认保存在你的设备中，可选择使用你自己的 iCloud 私有数据库同步。">
+
+</p>
+
+
+<ul>
+
+<li data-en="No account required"
+data-zh="无需注册账号">
+</li>
+
+<li data-en="No third-party upload"
+data-zh="不会上传给第三方">
+</li>
+
+<li data-en="Face ID / Passcode protection"
+data-zh="支持 Face ID / 密码保护">
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="support" class="section">
+
+
+<div class="card">
+
+
+<h2
+
+data-en="Support"
+
+data-zh="支持">
+
+</h2>
+
+
+<p class="text2"
+
+data-en="Questions or feedback? Contact us anytime."
+
+data-zh="如果有任何问题或建议，请联系我们。">
+
+</p>
+
+
+<p>
+
+<a href="mailto:support@clinicnote.app">
+
+support@clinicnote.app
+
+</a>
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer class="footer">
+
+
+<strong>
+
+ClinicNote
+
+</strong>
+
+
+<br>
+
+
+<span
+
+data-en="Your Family Medical Memory"
+
+data-zh="全家的医疗记忆">
+
+</span>
+
+
+</footer>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function setLang(lang){
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+
+let v =
+el.getAttribute(
+lang==="zh"
+?
+"data-zh"
+:
+"data-en"
+);
+
+
+if(v)
+
+el.textContent=v;
+
+
+});
+
+}
+
+
+
+setLang("en");
+
+
+</script>
+
+
+
+</body>
+
+</html>
